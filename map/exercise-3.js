@@ -19,7 +19,6 @@ to generate a button:
 https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
 
 */
-
 const buttons = [
   {
     text: 'Button Text 1',
@@ -32,6 +31,12 @@ const buttons = [
   },
 ];
 
-const buttonElements = null; // Replace null and add .map code here
+const buttonElements = buttons.map((item) => {
+  const newButton = document.createElement('button');
+  newButton.innerText = item.text;
+  console.log(newButton);
+  
+  return newButton;
+});
 
 console.log(buttonElements);
